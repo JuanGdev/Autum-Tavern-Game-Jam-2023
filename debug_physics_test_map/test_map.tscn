@@ -1455,6 +1455,9 @@ script = ExtResource("1_pgcw5")
 [node name="Daredevil" parent="Node2D" instance=ExtResource("2_3pld7")]
 position = Vector2(-776, 348)
 
+[node name="Daredevil" parent="Node2D/Daredevil" instance=ExtResource("2_3pld7")]
+position = Vector2(207, -131)
+
 [node name="TileMap" type="TileMap" parent="Node2D"]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_5he67")
