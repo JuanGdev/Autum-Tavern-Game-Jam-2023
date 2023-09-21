@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-# Yoooooo
+
 var POINTS = 10
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
