@@ -42,7 +42,3 @@ func _physics_process(delta):
 		anim.play("Fall")
 
 	move_and_slide()
-	
-	#if POINTS <= 0:
-		#queue_free()
-		#get_tree().change_scene_to_file("res://Scenes/main.tscn")

@@ -15,12 +15,6 @@ run/main_scene="res://debug_physics_test_map/test_map.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.png"
 
-[autoload]
-
-Dialogue="*res://scenes/autoloads/dialogue.tscn"
-Options="*res://scenes/autoloads/options.tscn"
-SaveLoad="*res://scenes/autoloads/save_load.tscn"
-
 [display]
 
 window/size/viewport_width=1920
@@ -50,7 +44,7 @@ jump={
 
 [physics]
 
-2d/default_gravity=900.0
+2d/default_gravity=400.0
 
 [rendering]
 

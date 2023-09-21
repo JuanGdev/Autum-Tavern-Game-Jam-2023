@@ -1,18 +1,106 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmxxhsxpo0uae"]
+[gd_scene load_steps=14 format=3 uid="uid://bmxxhsxpo0uae"]
 
 [ext_resource type="Script" path="res://Daredevil_character/daredevil.gd" id="1_0fwrq"]
-[ext_resource type="Texture2D" uid="uid://bkdtxltokcbty" path="res://art/yellowbird-midflap.png" id="2_4tte8"]
+[ext_resource type="Texture2D" uid="uid://ehqgno3no1md" path="res://art/esnaque.png" id="3_x5lyj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8a0li"]
-height = 20.0
+radius = 15.89
+height = 61.18
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7vd5"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(0, 0, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qukv"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(37, 0, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e68p3"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(0, 189, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc132"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(0, 126, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsuv6"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(0, 63, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obefd"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(37, 63, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5a6s"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(74, 63, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug6f6"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(111, 63, 37, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30yb1"]
+atlas = ExtResource("3_x5lyj")
+region = Rect2(148, 63, 37, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhkr2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7vd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qukv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e68p3")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc132")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsuv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obefd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5a6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug6f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30yb1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Daredevil" type="CharacterBody2D"]
 script = ExtResource("1_0fwrq")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4tte8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8a0li")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rhkr2")
+animation = &"walk"
