@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc0eg3n2rpcy7"]
+
+[ext_resource type="Script" path="res://scenes/players/player_platformer.gd" id="1_t3qrb"]
+[ext_resource type="Texture2D" uid="uid://bdu8j442phoep" path="res://icon.svg" id="2_ggbcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffix3"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xjtx"]
+size = Vector2(128, 128)
+
+[node name="PlayerPlatformer" type="CharacterBody2D"]
+script = ExtResource("1_t3qrb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ggbcp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ffix3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Interactor" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactor"]
+shape = SubResource("RectangleShape2D_2xjtx")
