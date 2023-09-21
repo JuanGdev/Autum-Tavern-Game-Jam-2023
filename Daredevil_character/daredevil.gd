@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Daredevil
 
 #comment for testing merge conflicts
+#Hello Juan from github desktop!
 
 #const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
