@@ -3,17 +3,3 @@
 .DS_Store
 resources/.DS_Store
 *.import
-# Archivos generados por Godot que deben ser ignorados
-*.import
-*.import.res
-*.tscn.export
-*.tres
-*.tres.tmp
-*.tscn
-*.scon
-
-# Directorios generados por Godot que deben ser ignorados
-/.import/
-/.export/
-/.import.tmp/
-/.export.tmp/
