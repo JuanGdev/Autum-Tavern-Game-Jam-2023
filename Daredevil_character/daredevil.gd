@@ -2,8 +2,8 @@ extends CharacterBody2D
 class_name Daredevil
 
 #const SPEED = 300.0
-const JUMP_VELOCITY = -200.0
-const RUNNING_SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+const RUNNING_SPEED = 500.0
 const MAX_FALLING_SPEED = 200.0
 
 
@@ -26,7 +26,7 @@ func _physics_process(delta):
 	
 
 	if velocity.x < RUNNING_SPEED:
-		velocity.x += 100.0 * delta
+		velocity.x += 60.0 * delta
 	else:
 		velocity.x = RUNNING_SPEED
 		
@@ -51,6 +51,6 @@ func _physics_process(delta):
 		anim.play("jump")
 	if velocity.y > 0:
 		anim.play("walk")
-	print(velocity)
+	#print(velocity)
 	move_and_slide()
 

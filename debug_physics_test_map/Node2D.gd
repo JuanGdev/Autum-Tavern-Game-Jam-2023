@@ -8,7 +8,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	camera.position.x = character.position.x + 750
-	camera.position.y = character.position.y - 350
+func _process(_delta):
+	camera.position.x = character.position.x + 375
+	camera.position.y = character.position.y - 50
 	pass
