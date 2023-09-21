@@ -24,11 +24,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY  
 	
-	if is_on_floor():
-		if velocity.x < RUNNING_SPEED:
-			velocity.x += 100.0 * delta
-		else:
-			velocity.x = RUNNING_SPEED
+
+	if velocity.x < RUNNING_SPEED:
+		velocity.x += 100.0 * delta
+	else:
+		velocity.x = RUNNING_SPEED
 		
 	# Get the input direction and handle the movement/deceleration.
 	var direction = 1
