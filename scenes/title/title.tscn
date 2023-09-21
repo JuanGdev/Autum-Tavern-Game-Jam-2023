@@ -24,12 +24,12 @@ metadata/_edit_lock_ = true
 
 [node name="JamName" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Game Jam"
+text = "Tavern Jam"
 horizontal_alignment = 1
 
 [node name="GameName" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Game Name"
+text = "Juego elotoso"
 horizontal_alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
@@ -46,6 +46,8 @@ text = "Load"
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Options"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="VBoxContainer"]
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
