@@ -15,11 +15,6 @@ run/main_scene="res://debug_physics_test_map/test_map.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.png"
 
-[autoload]
-
-Game="*res://Global/Game.gd"
-Utils="*res://Global/Utils.gd"
-
 [display]
 
 window/size/viewport_width=1920

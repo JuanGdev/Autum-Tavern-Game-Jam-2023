@@ -3,5 +3,3 @@
 .DS_Store
 resources/.DS_Store
 *.import
-# Savefile
-savegame.bin
