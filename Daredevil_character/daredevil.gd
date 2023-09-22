@@ -9,6 +9,7 @@ class_name Daredevil
 
 
 #const SPEED = 300.0
+var SCORE = 3784
 const JUMP_VELOCITY = -400.0
 const RUNNING_SPEED = 500.0
 const MAX_FALLING_SPEED = 200.0

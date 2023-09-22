@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vg5yvrjbl1se"]
+[gd_scene load_steps=9 format=3 uid="uid://vg5yvrjbl1se"]
 
 [ext_resource type="Script" path="res://debug_physics_test_map/Node2D.gd" id="1_pgcw5"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="2_3pld7"]
@@ -1447,6 +1447,26 @@ sources/0 = SubResource("TileSetAtlasSource_473sg")
 pattern_0 = SubResource("TileMapPattern_b4fep")
 pattern_1 = SubResource("TileMapPattern_pt0tb")
 
+[sub_resource type="GDScript" id="GDScript_0cpjf"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	var AdP = (get_node(\"../../Daredevil\").SCORE)/1000
+	
+	if (get_node(\"../../Daredevil\").SCORE) > 1000:
+		text = str(AdP)
+		AdP -= 1
+	
+	pass
+"
+
 [node name="test_map" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -1478,3 +1498,10 @@ position = Vector2(-535, 295)
 scale = Vector2(0.2, 0.2)
 zoom = Vector2(2, 2)
 position_smoothing_speed = 8.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+
+[node name="Label" type="Label" parent="Node2D/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = SubResource("GDScript_0cpjf")

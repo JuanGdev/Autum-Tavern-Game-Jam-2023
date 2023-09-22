@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://ddiu7t8pqmsae"]
 
 [node name="Adrenalyn" type="CanvasLayer"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
