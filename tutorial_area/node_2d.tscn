@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl87dp21yf263"]
 
-[ext_resource type="Script" path="res://Node2D.gd" id="1_5b308"]
+[ext_resource type="Script" path="res://tutorial_area/Node2D.gd" id="1_u6w7r"]
 [ext_resource type="Texture2D" uid="uid://dl2i4upiv6hxp" path="res://art/SPRITES/ESCENARIOS/TILESET/ground base tileset.jpg" id="2_ll3um"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="3_1eqec"]
 
@@ -34,7 +34,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2b3gn")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_5b308")
+script = ExtResource("1_u6w7r")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0nhni")
