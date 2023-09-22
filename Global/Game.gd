@@ -1,0 +1,6 @@
+extends Node
+
+var ADREN = 1000
+var SCORETOTAL = 10000
+var SCORECURRENT
+

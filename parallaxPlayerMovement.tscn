@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmnnba3a77goy"]
+[gd_scene load_steps=4 format=3 uid="uid://om5fetfewlj5"]
 
-[ext_resource type="Texture2D" uid="uid://m158xhixdwau" path="res://Parallax Bg/sky.png" id="1_1hndu"]
-[ext_resource type="Texture2D" uid="uid://7ede42fqfuwv" path="res://Parallax Bg/mountains.png" id="2_yytlw"]
+[ext_resource type="Texture2D" path="res://Parallax Bg/sky.png" id="1_1hndu"]
+[ext_resource type="Texture2D" path="res://Parallax Bg/mountains.png" id="2_yytlw"]
 [ext_resource type="Script" path="res://parallaxCameraMovement.gd" id="3_ygva0"]
 
 [node name="Node2D" type="Node2D"]
