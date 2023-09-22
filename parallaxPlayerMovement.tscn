@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://om5fetfewlj5"]
+
+[ext_resource type="Texture2D" path="res://Parallax Bg/sky.png" id="1_1hndu"]
+[ext_resource type="Texture2D" path="res://Parallax Bg/mountains.png" id="2_yytlw"]
+[ext_resource type="Script" path="res://parallaxCameraMovement.gd" id="3_ygva0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+scale = Vector2(6.01897, 4.49897)
+texture = ExtResource("1_1hndu")
+centered = false
+
+[node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+scale = Vector2(6, 4.48)
+texture = ExtResource("2_yytlw")
+centered = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_ygva0")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+anchor_mode = 0
