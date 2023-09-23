@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" path="res://debug_physics_test_map/Node2D.gd" id="1_jmyfq"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="2_83b7c"]
-[ext_resource type="Texture2D" uid="uid://b6c6mwirninfs" path="res://art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="3_gl2vc"]
+[ext_resource type="PackedScene" uid="uid://7s2r1tyoccgs" path="res://Objects_Items/Cone.tscn" id="2_p7d7v"]
+[ext_resource type="Texture2D" uid="uid://ce3y8wgxvr8ht" path="res://art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="3_gl2vc"]
+[ext_resource type="PackedScene" uid="uid://dys7rmt46lyud" path="res://Objects_Items/Cocacola.tscn" id="4_vqe38"]
+[ext_resource type="PackedScene" uid="uid://c2p3ge1p6gpfs" path="res://UserInterface/ui.tscn" id="6_kgvry"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_b4fep"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 131072, 0, 2, 196608, 0, 3, 262144, 0, 4, 1, 65536, 0, 65537, 65536, 1, 131073, 65536, 2, 196609, 65536, 3, 262145, 65536, 4, 2, 131072, 0, 65538, 131072, 1, 131074, 131072, 2, 196610, 131072, 3, 262146, 131072, 4, 3, 196608, 0, 65539, 196608, 1, 131075, 196608, 2, 196611, 196608, 3, 262147, 196608, 4, 4, 262144, 0, 65540, 262144, 1, 131076, 262144, 2, 196612, 262144, 3, 262148, 262144, 4)
@@ -1447,36 +1450,6 @@ sources/0 = SubResource("TileSetAtlasSource_473sg")
 pattern_0 = SubResource("TileMapPattern_b4fep")
 pattern_1 = SubResource("TileMapPattern_pt0tb")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24pm5"]
-bg_color = Color(1, 0.403922, 0.607843, 0.109804)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw8ag"]
-bg_color = Color(0, 0.996078, 0.572549, 1)
-
-[sub_resource type="GDScript" id="GDScript_0cpjf"]
-script/source = "extends ProgressBar
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#var AdP = (get_node(\"../../Daredevil\").SCORE)/1000
-	if (get_node(\"../../Daredevil\").SCORE) < 1000:
-		value -= 2
-	else:
-		value -= 1 
-	
-	pass
-"
-
 [node name="test_map" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -1484,9 +1457,6 @@ script = ExtResource("1_jmyfq")
 
 [node name="Daredevil" parent="Node2D" instance=ExtResource("2_83b7c")]
 position = Vector2(-776, 348)
-
-[node name="Daredevil" parent="Node2D/Daredevil" instance=ExtResource("2_83b7c")]
-position = Vector2(207, -131)
 
 [node name="TileMap" type="TileMap" parent="Node2D"]
 y_sort_enabled = true
@@ -1509,28 +1479,13 @@ scale = Vector2(0.2, 0.2)
 zoom = Vector2(2, 2)
 position_smoothing_speed = 8.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Node2D"]
+[node name="Cone" parent="Node2D" instance=ExtResource("4_vqe38")]
+position = Vector2(1042, 455)
 
-[node name="Adrenalin" type="ProgressBar" parent="Node2D/CanvasLayer"]
-anchors_preset = -1
-anchor_left = -0.523
-anchor_top = 0.025
-anchor_right = -0.523
-anchor_bottom = 0.025
-offset_left = 1103.16
-offset_top = -8.0
-offset_right = 1437.16
-offset_bottom = 19.0
-theme_override_styles/background = SubResource("StyleBoxFlat_24pm5")
-theme_override_styles/fill = SubResource("StyleBoxFlat_bw8ag")
-max_value = 1000.0
-value = 1000.0
-show_percentage = false
-script = SubResource("GDScript_0cpjf")
+[node name="Cone2" parent="Node2D" instance=ExtResource("2_p7d7v")]
+position = Vector2(5026, 460)
 
-[node name="Label" type="Label" parent="Node2D/CanvasLayer"]
-offset_left = 231.0
-offset_top = 20.0
-offset_right = 316.0
-offset_bottom = 46.0
-text = "Adrenalina"
+[node name="FlappyBird" parent="Node2D" instance=ExtResource("2_p7d7v")]
+position = Vector2(537, 457)
+
+[node name="CanvasLayer" parent="Node2D" instance=ExtResource("6_kgvry")]
