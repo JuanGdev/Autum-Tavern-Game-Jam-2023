@@ -1,24 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://7s2r1tyoccgs"]
+[gd_scene load_steps=4 format=3 uid="uid://xpr30ebgsk5v"]
 
-[ext_resource type="Script" path="res://Objects_Items/Cone.gd" id="1_2d82b"]
-[ext_resource type="Texture2D" uid="uid://c8pc6bebjtl8j" path="res://art/SPRITES/OBJETOS/PLANTITA.png" id="2_orw4b"]
+[ext_resource type="Script" path="res://Objects_Items/Plant.gd" id="1_a7veb"]
+[ext_resource type="Texture2D" uid="uid://c8pc6bebjtl8j" path="res://art/SPRITES/OBJETOS/PLANTITA.png" id="2_fnby8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3vkt"]
 size = Vector2(41, 56)
 
-[node name="Plant" type="Area2D" groups=["items"]]
-script = ExtResource("1_2d82b")
+[node name="Plant_node" type="Area2D"]
+script = ExtResource("1_a7veb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -10)
 shape = SubResource("RectangleShape2D_a3vkt")
 
-[node name="Plant" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -14)
-texture = ExtResource("2_orw4b")
+texture = ExtResource("2_fnby8")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.5
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

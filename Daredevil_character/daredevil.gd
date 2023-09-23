@@ -30,12 +30,18 @@ func _physics_process(delta):
 		Game.CURRENT_SPEED.y = Game.JUMP_VELOCITY  
 
 	####---Walking into running, slowing and boost---####
-	if Game.CURRENT_SPEED.x < RUNNING_SPEED:
-		Game.CURRENT_SPEED.x += 100.0 * delta
-	elif Game.BOOSTED:
-		Game.CURRENT_SPEED.x = SPEED_CAP
+	if Game.BOOSTED:
+		if Game.CURRENT_SPEED.x < SPEED_CAP:
+			Game.CURRENT_SPEED.x += 200 * delta
+		else:
+			Game.CURRENT_SPEED.x = SPEED_CAP
 	elif Game.SLOWED:
-		Game.CURRENT_SPEED.x = SLOW_SPEED
+		if Game.CURRENT_SPEED.x < SLOW_SPEED:
+			Game.CURRENT_SPEED.x -= 50 * delta
+		else:
+			Game.CURRENT_SPEED.x = SLOW_SPEED	
+	elif Game.CURRENT_SPEED.x < RUNNING_SPEED:
+		Game.CURRENT_SPEED.x += 100.0 * delta
 	else:
 		Game.CURRENT_SPEED.x = RUNNING_SPEED
 	

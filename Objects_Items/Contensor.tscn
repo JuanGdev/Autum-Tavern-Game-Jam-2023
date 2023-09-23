@@ -1,24 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://7s2r1tyoccgs"]
+[gd_scene load_steps=4 format=3 uid="uid://c4xs43e0hw20q"]
 
-[ext_resource type="Script" path="res://Objects_Items/Cone.gd" id="1_2d82b"]
-[ext_resource type="Texture2D" uid="uid://co18urvtv2o7" path="res://art/SPRITES/OBJETOS/CONTENSOR.png" id="2_ot27o"]
+[ext_resource type="Script" path="res://Objects_Items/Contensor.gd" id="1_24sdk"]
+[ext_resource type="Texture2D" uid="uid://co18urvtv2o7" path="res://art/SPRITES/OBJETOS/CONTENSOR.png" id="2_fkq3p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3vkt"]
 size = Vector2(52, 37)
 
 [node name="Contensor" type="Area2D" groups=["items"]]
-script = ExtResource("1_2d82b")
+script = ExtResource("1_24sdk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6.5)
 shape = SubResource("RectangleShape2D_a3vkt")
 
-[node name="Contensor" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, -14)
-texture = ExtResource("2_ot27o")
+texture = ExtResource("2_fkq3p")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.5
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

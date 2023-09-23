@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctqgqw7wnqiwx"]
 
-[ext_resource type="Script" path="res://Objects_Items/ForcePull.gd" id="1_10fuo"]
+[ext_resource type="Script" path="res://ForcePull.gd" id="1_10fuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx6yx"]
 size = Vector2(64.5, 190)

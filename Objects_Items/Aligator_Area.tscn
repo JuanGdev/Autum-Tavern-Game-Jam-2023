@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck1wu715i125a"]
+
+[ext_resource type="Script" path="res://Objects_Items/Aligator_Area.gd" id="1_c671u"]
+[ext_resource type="Texture2D" uid="uid://c4akes1vnripm" path="res://art/SPRITES/OBJETOS/COCODRILO.png" id="2_u7ctg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7qoi"]
+size = Vector2(97.5, 36.5)
+
+[node name="Aligator_Area" type="Area2D"]
+script = ExtResource("1_c671u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_u7ctg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.25, 19.25)
+shape = SubResource("RectangleShape2D_s7qoi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

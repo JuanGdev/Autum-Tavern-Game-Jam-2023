@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://nvwyd2goi126"]
 
-[ext_resource type="Texture2D" uid="uid://buvougjwstla2" path="res://icon.svg" id="1_10vgj"]
+[ext_resource type="Texture2D" uid="uid://cdyxjbrgp5424" path="res://icon.svg" id="1_10vgj"]
 [ext_resource type="Script" path="res://Objects_Items/Sewer.gd" id="1_yinhj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnfke"]
