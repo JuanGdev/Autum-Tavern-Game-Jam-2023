@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://nvwyd2goi126"]
+
+[ext_resource type="Texture2D" uid="uid://buvougjwstla2" path="res://icon.svg" id="1_10vgj"]
+[ext_resource type="Script" path="res://Objects_Items/Sewer.gd" id="1_yinhj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnfke"]
+size = Vector2(128, 194)
+
+[node name="Sewer" type="Area2D"]
+script = ExtResource("1_yinhj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 62)
+shape = SubResource("RectangleShape2D_gnfke")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(3, -5)
+scale = Vector2(1, 0.40625)
+texture = ExtResource("1_10vgj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

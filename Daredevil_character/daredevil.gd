@@ -18,7 +18,11 @@ func _physics_process(delta):
 		if  Game.CURRENT_SPEED.y < MAX_FALLING_SPEED:
 			Game.CURRENT_SPEED.y += Game.gravity * delta
 		else:
-			Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
+			if Game.DEATHFALL == false:
+				Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
+			else:
+				Game.CURRENT_SPEED.y += 250
+		
 	else:
 		Game.CURRENT_SPEED.y = 0
 

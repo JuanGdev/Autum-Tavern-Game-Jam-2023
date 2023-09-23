@@ -2,6 +2,7 @@ extends Node
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var DEATHFALL = false
 var HEALTH = 3
 var ADREN = 1000
 var SCORETOTAL = 10000

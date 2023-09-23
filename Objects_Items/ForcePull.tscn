@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctqgqw7wnqiwx"]
+
+[ext_resource type="Script" path="res://Objects_Items/ForcePull.gd" id="1_10fuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx6yx"]
+size = Vector2(64.5, 190)
+
+[node name="ForcePull" type="Area2D"]
+script = ExtResource("1_10fuo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hx6yx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
