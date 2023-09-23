@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7s2r1tyoccgs"]
 
 [ext_resource type="Script" path="res://Objects_Items/Cone.gd" id="1_2d82b"]
-[ext_resource type="Texture2D" uid="uid://ba47vmoo6j2t0" path="res://art/SPRITES/OBJETOS/CONO.png" id="2_00w1x"]
+[ext_resource type="Texture2D" uid="uid://ur5vq3piff0x" path="res://art/SPRITES/OBJETOS/CONO.png" id="2_00w1x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3vkt"]
 size = Vector2(40, 42)

@@ -1,16 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2p3ge1p6gpfs"]
+[gd_scene load_steps=7 format=3 uid="uid://c2p3ge1p6gpfs"]
 
 [ext_resource type="Script" path="res://UserInterface/Score_Text.gd" id="1_mywss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24pm5"]
 bg_color = Color(1, 0.403922, 0.607843, 0.109804)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw8ag"]
-bg_color = Color(0, 0.996078, 0.572549, 1)
+bg_color = Color(0.447059, 0.917647, 1, 1)
 
 [sub_resource type="GDScript" id="GDScript_0cpjf"]
 script/source = "extends ProgressBar
@@ -19,9 +15,14 @@ func _process(_delta):
 	value = Game.ADREN
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_050yg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba20c"]
+bg_color = Color(1, 0.243137, 0.270588, 1)
+
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="Adrenalin" type="ProgressBar" parent="."]
+[node name="Adrenaline" type="ProgressBar" parent="."]
 anchors_preset = -1
 anchor_left = -0.523
 anchor_top = 0.025
@@ -52,3 +53,13 @@ offset_right = 1894.0
 offset_bottom = 81.0
 text = "Score: 0"
 script = ExtResource("1_mywss")
+
+[node name="HEALTH" type="ProgressBar" parent="."]
+offset_left = 748.0
+offset_top = 20.0
+offset_right = 966.0
+offset_bottom = 47.0
+theme_override_styles/background = SubResource("StyleBoxFlat_050yg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ba20c")
+max_value = 3.0
+value = 1.0

@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2rlfrbw38orw"]
+
+[ext_resource type="Script" path="res://Objects_Items/Jump_pad.gd" id="1_6mpg5"]
+[ext_resource type="Texture2D" uid="uid://bwkes86i6qy8j" path="res://art/SPRITES/OBJETOS/RATÓN.png" id="1_8hltx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnfke"]
+size = Vector2(94, 35)
+
+[node name="Jump_pad" type="Area2D"]
+script = ExtResource("1_6mpg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -17.5)
+shape = SubResource("RectangleShape2D_gnfke")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Ratón" type="Sprite2D" parent="."]
+position = Vector2(-24.0803, -38.6216)
+texture = ExtResource("1_8hltx")
+
+[node name="Ratón2" type="Sprite2D" parent="."]
+position = Vector2(-30, -11)
+rotation = -0.966912
+texture = ExtResource("1_8hltx")
+
+[node name="Ratón3" type="Sprite2D" parent="."]
+position = Vector2(25.9197, -34.6216)
+rotation = 0.148353
+texture = ExtResource("1_8hltx")
+flip_h = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

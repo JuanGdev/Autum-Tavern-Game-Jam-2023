@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dys7rmt46lyud"]
 
 [ext_resource type="Script" path="res://Objects_Items/Cocacola.gd" id="1_hspo4"]
-[ext_resource type="Texture2D" uid="uid://rconsby68y3u" path="res://art/SPRITES/OBJETOS/COQUITA BIEN FRÍA.png" id="2_a0wln"]
+[ext_resource type="Texture2D" uid="uid://bwruqwitmnhje" path="res://art/SPRITES/OBJETOS/COQUITA BIEN FRÍA.png" id="2_a0wln"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ccuyc"]
 radius = 12.0

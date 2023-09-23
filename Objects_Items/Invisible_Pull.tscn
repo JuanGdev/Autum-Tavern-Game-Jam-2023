@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbwepwh0dst3c"]
+
+[ext_resource type="Script" path="res://Objects_Items/Invisible_Pull.gd" id="1_fk1t0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hfj18"]
+radius = 312.04
+
+[node name="Invisible_Pull" type="Area2D"]
+script = ExtResource("1_fk1t0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hfj18")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
