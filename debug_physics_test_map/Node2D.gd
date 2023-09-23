@@ -8,4 +8,3 @@ func _process(_delta):
 	camera.position.x = character.position.x + 375
 	camera.position.y = character.position.y - 50
 	Game.ADREN -= 1
-	##ElAssdeJuan
