@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cdpi8f371bd7t"]
+[gd_scene load_steps=64 format=3 uid="uid://cdpi8f371bd7t"]
 
 [ext_resource type="Script" path="res://tutorial_area/Tutorial_area.gd" id="1_a2xgr"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="1_xh7hl"]
@@ -52,6 +52,10 @@
 [ext_resource type="PackedScene" uid="uid://bnrdmbv8qln2d" path="res://Objects_Items/Andamio_2piso.tscn" id="50_38i8m"]
 [ext_resource type="PackedScene" uid="uid://x3pkiwu36ct8" path="res://Objects_Items/Andamio_3piso.tscn" id="51_vtjh1"]
 [ext_resource type="PackedScene" uid="uid://b58h7xyv76cqy" path="res://Objects_Items/Andamio_4piso.tscn" id="52_7rr60"]
+[ext_resource type="PackedScene" uid="uid://51t1ci6332ee" path="res://Objects_Items/GOAL.tscn" id="53_jlwmx"]
+[ext_resource type="PackedScene" uid="uid://b3m7004xuxefv" path="res://Objects_Items/Andamio_5piso.tscn" id="54_o1xx4"]
+[ext_resource type="PackedScene" uid="uid://dymp6hltnvdu6" path="res://Objects_Items/Cocacola.tscn" id="55_oyr6g"]
+[ext_resource type="PackedScene" uid="uid://f2h5oh7k4m0d" path="res://Objects_Items/Andamio_6piso.tscn" id="56_i5k23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcc5c"]
 texture = ExtResource("12_rqirb")
@@ -1703,27 +1707,6 @@ texture = ExtResource("11_1x0bk")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("13_2jflv")]
 
-[node name="Plant_node" parent="." instance=ExtResource("11_p767v")]
-position = Vector2(1900, 427)
-
-[node name="Dog" parent="." instance=ExtResource("8_ls6ir")]
-position = Vector2(2096, 419)
-
-[node name="Cat" parent="." instance=ExtResource("9_a2oxf")]
-position = Vector2(2371, 416)
-
-[node name="Aligator_Area" parent="." instance=ExtResource("10_qhlub")]
-position = Vector2(3304, 410)
-
-[node name="Cone" parent="." instance=ExtResource("13_fn442")]
-position = Vector2(3165, 423)
-
-[node name="Basura" parent="." instance=ExtResource("14_adjoi")]
-position = Vector2(2904, 421)
-
-[node name="Contensor" parent="." instance=ExtResource("13_ts4q3")]
-position = Vector2(3549, 433)
-
 [node name="Sewers_background" type="TileMap" parent="."]
 position = Vector2(6, 687)
 tile_set = SubResource("TileSet_p4rnp")
@@ -1746,17 +1729,203 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Daredevil" parent="." instance=ExtResource("1_xh7hl")]
-position = Vector2(104, 319)
-
 [node name="Andamio_1piso" parent="." instance=ExtResource("49_o2txb")]
 position = Vector2(3771, 378)
 
 [node name="Andamio2pisos" parent="." instance=ExtResource("50_38i8m")]
-position = Vector2(4097, 418)
+position = Vector2(4097, 430)
 
 [node name="Andamio2pisos2" parent="." instance=ExtResource("51_vtjh1")]
-position = Vector2(4643, 420)
+position = Vector2(4643, 430)
 
-[node name="Andamio2pisos3" parent="." instance=ExtResource("52_7rr60")]
-position = Vector2(5420, 433)
+[node name="Andamio2pisos4" parent="." instance=ExtResource("52_7rr60")]
+position = Vector2(5018, 430)
+
+[node name="Andamio2pisos5" parent="." instance=ExtResource("54_o1xx4")]
+position = Vector2(5372, 431)
+
+[node name="Andamio2pisos3" parent="." instance=ExtResource("54_o1xx4")]
+position = Vector2(5791, 432)
+
+[node name="Plant_node" parent="." instance=ExtResource("11_p767v")]
+position = Vector2(4821, 168)
+
+[node name="Dog" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(4805, 254)
+
+[node name="Cat" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(4121, 355)
+
+[node name="Aligator_Area" parent="." instance=ExtResource("10_qhlub")]
+position = Vector2(4185, 407)
+
+[node name="Cone" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(4666, 434)
+
+[node name="Basura" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(5115, 421)
+
+[node name="Contensor" parent="." instance=ExtResource("13_ts4q3")]
+position = Vector2(3754, 436)
+
+[node name="Plant_node2" parent="." instance=ExtResource("53_jlwmx")]
+position = Vector2(11409, 430)
+
+[node name="Daredevil" parent="." instance=ExtResource("1_xh7hl")]
+position = Vector2(104, 319)
+
+[node name="Cocacola_node" parent="." instance=ExtResource("55_oyr6g")]
+position = Vector2(5209, 54)
+
+[node name="Cat2" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(5211, 247)
+
+[node name="Dog2" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(5535, -56)
+
+[node name="Cocacola_node2" parent="." instance=ExtResource("55_oyr6g")]
+position = Vector2(5968, -52)
+
+[node name="Dog3" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6276, 420)
+
+[node name="Cone2" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(5895, 427)
+
+[node name="Basura2" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(5463, 422)
+
+[node name="Cone3" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1041, 429)
+
+[node name="Cone4" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1086, 430)
+
+[node name="Andamio_1piso2" parent="." instance=ExtResource("49_o2txb")]
+position = Vector2(6255, 379)
+
+[node name="Andamio2pisos6" parent="." instance=ExtResource("50_38i8m")]
+position = Vector2(6663, 437)
+
+[node name="Andamio2pisos7" parent="." instance=ExtResource("50_38i8m")]
+position = Vector2(7324, 433)
+
+[node name="Andamio_1piso3" parent="." instance=ExtResource("49_o2txb")]
+position = Vector2(8035, 378.75)
+
+[node name="Andamio2pisos8" parent="." instance=ExtResource("50_38i8m")]
+position = Vector2(8413, 433)
+
+[node name="Andamio2pisos9" parent="." instance=ExtResource("51_vtjh1")]
+position = Vector2(9000, 434)
+
+[node name="Andamio2pisos10" parent="." instance=ExtResource("52_7rr60")]
+position = Vector2(9507, 436)
+
+[node name="Andamio2pisos11" parent="." instance=ExtResource("54_o1xx4")]
+position = Vector2(10107, 432)
+
+[node name="Andamio2pisos12" parent="." instance=ExtResource("56_i5k23")]
+position = Vector2(10780, 433)
+
+[node name="Cat3" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(7933, 333)
+
+[node name="Cat4" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(8460, 251)
+
+[node name="Basura3" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(7996, 335)
+
+[node name="Basura4" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(8414, 252)
+
+[node name="Cat5" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(8991, 153)
+
+[node name="Cat6" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(9502, 52)
+
+[node name="Cat7" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(10104, -55)
+
+[node name="Cone5" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(7516, 262)
+
+[node name="Cone6" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(7325, 260)
+
+[node name="Cone7" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(7317, 369)
+
+[node name="Cone8" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(7518, 369)
+
+[node name="Basura5" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(7324, 429)
+
+[node name="Basura6" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(7518, 430)
+
+[node name="Contensor2" parent="." instance=ExtResource("13_ts4q3")]
+position = Vector2(6660, 377)
+
+[node name="Cocacola_node3" parent="." instance=ExtResource("55_oyr6g")]
+position = Vector2(6664, 261)
+
+[node name="Cone9" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(6702, 263)
+
+[node name="Dog4" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6242, 421)
+
+[node name="Dog5" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6305, 418)
+
+[node name="Dog6" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6212, 419)
+
+[node name="Dog7" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6336, 423)
+
+[node name="Dog8" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(6174, 421)
+
+[node name="Basura7" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(6166, 342)
+
+[node name="Basura8" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(6212, 345)
+
+[node name="Basura9" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(6256, 345)
+
+[node name="Basura10" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(6296, 346)
+
+[node name="Basura11" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(6340, 343)
+
+[node name="Cat8" parent="." instance=ExtResource("9_a2oxf")]
+position = Vector2(4101, 252)
+
+[node name="Cone10" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(4808, 364)
+
+[node name="Cone11" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(5010, 365)
+
+[node name="Cone12" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(4635, 366)
+
+[node name="Basura12" parent="." instance=ExtResource("14_adjoi")]
+position = Vector2(5016, 251)
+
+[node name="Plant_node3" parent="." instance=ExtResource("11_p767v")]
+position = Vector2(5025, 166)
+
+[node name="Plant_node4" parent="." instance=ExtResource("11_p767v")]
+position = Vector2(5201, 167)
+
+[node name="Dog9" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(5404, 55)

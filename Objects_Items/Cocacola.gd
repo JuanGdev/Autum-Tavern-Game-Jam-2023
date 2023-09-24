@@ -6,7 +6,7 @@ extends Area2D
 func _on_body_entered(body):
 	if body.name == "Daredevil":
 		Game.SCORECURRENT += 500
-		Game.ADREN -= 100
+		Game.ADREN += 200
 		Game.SLOWED = false
 		Game.BOOSTED = true
 		sprite.hide()

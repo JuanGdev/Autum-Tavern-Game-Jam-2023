@@ -67,15 +67,3 @@ texture = ExtResource("1_byssr")
 position = Vector2(-3, -10)
 shape = SubResource("RectangleShape2D_vcvsb")
 one_way_collision = true
-
-[node name="Andamio_piso6" type="Sprite2D" parent="."]
-position = Vector2(205, -1106)
-scale = Vector2(4.516, 2.17)
-texture = ExtResource("1_byssr")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Andamio_piso6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Andamio_piso6/StaticBody2D"]
-position = Vector2(-3, -10)
-shape = SubResource("RectangleShape2D_vcvsb")
-one_way_collision = true
