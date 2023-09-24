@@ -2,10 +2,7 @@ extends CharacterBody2D
 class_name Daredevil
 
 
-const RUNNING_SPEED = 500.0
-const SPEED_CAP = 800.0
-const SLOW_SPEED = 250.0
-const MAX_FALLING_SPEED = 200.0
+
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -15,11 +12,11 @@ const MAX_FALLING_SPEED = 200.0
 func _physics_process(delta):
 	####-----------------jump and fall-----------------####
 	if not is_on_floor():
-		if  Game.CURRENT_SPEED.y < MAX_FALLING_SPEED:
+		if  Game.CURRENT_SPEED.y < Game.MAX_FALLING_SPEED:
 			Game.CURRENT_SPEED.y += Game.gravity * delta
 		else:
 			if Game.DEATHFALL == false:
-				Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
+				Game.CURRENT_SPEED.y = Game.MAX_FALLING_SPEED
 			else:
 				Game.CURRENT_SPEED.y += 250.0
 		
@@ -31,19 +28,19 @@ func _physics_process(delta):
 
 	####---Walking into running, slowing and boost---####
 	if Game.BOOSTED:
-		if Game.CURRENT_SPEED.x < SPEED_CAP:
+		if Game.CURRENT_SPEED.x < Game.SPEED_CAP:
 			Game.CURRENT_SPEED.x += 200.0 * delta
 		else:
-			Game.CURRENT_SPEED.x = SPEED_CAP
+			Game.CURRENT_SPEED.x = Game.SPEED_CAP
 	elif Game.SLOWED:
-		if Game.CURRENT_SPEED.x < SLOW_SPEED:
+		if Game.CURRENT_SPEED.x < Game.SLOW_SPEED:
 			Game.CURRENT_SPEED.x -= 50.0 * delta
 		else:
-			Game.CURRENT_SPEED.x = SLOW_SPEED	
-	elif Game.CURRENT_SPEED.x < RUNNING_SPEED:
+			Game.CURRENT_SPEED.x = Game.SLOW_SPEED	
+	elif Game.CURRENT_SPEED.x < Game.RUNNING_SPEED:
 		Game.CURRENT_SPEED.x += 100.0 * delta
 	else:
-		Game.CURRENT_SPEED.x = RUNNING_SPEED
+		Game.CURRENT_SPEED.x = Game.RUNNING_SPEED
 	
 	
 
@@ -55,7 +52,7 @@ func _physics_process(delta):
 	
 	if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
 		anim.play("idle")
-	elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
+	elif Game.CURRENT_SPEED.x == Game.RUNNING_SPEED:
 		anim.play("run")
 	else:
 		anim.play("walk")

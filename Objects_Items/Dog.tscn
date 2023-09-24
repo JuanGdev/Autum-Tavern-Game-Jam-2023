@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://can2sfinrckl7"]
 
 [ext_resource type="Script" path="res://Objects_Items/Dog.gd" id="1_y87sk"]
-[ext_resource type="Texture2D" uid="uid://cclsuweoyuy48" path="res://art/SPRITES/OBJETOS/PERRO.png" id="2_t5scp"]
+[ext_resource type="Texture2D" uid="uid://dx7nyjd2fte4a" path="res://art/SPRITES/OBJETOS/PERRO.png" id="2_t5scp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwhjh"]
 size = Vector2(53, 54)

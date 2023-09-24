@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://"]
 
-[ext_resource type="Script" path="res://Jump_pad.gd" id="1_6mpg5"]
-[ext_resource type="Texture2D" uid="uid://ce0l60o0lbtf0" path="res://art/SPRITES/OBJETOS/RATÓN.png" id="1_8hltx"]
+[ext_resource type="Script" path="res://Objects_Items/Jump_pad.gd" id="1_6mpg5"]
+[ext_resource type="Texture2D" uid="uid://dyg3wt0kgup7x" path="res://art/SPRITES/OBJETOS/RATÓN.png" id="1_8hltx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnfke"]
 size = Vector2(94, 35)
