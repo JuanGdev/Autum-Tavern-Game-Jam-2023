@@ -28,7 +28,7 @@ func _physics_process(delta):
 				if Game.DEATHFALL == false:
 					Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
 				else:
-					Game.CURRENT_SPEED.y += 250.0
+					Game.CURRENT_SPEED.y += 10000
 			
 		else:
 			Game.CURRENT_SPEED.y = 0
@@ -84,7 +84,7 @@ func _physics_process(delta):
 				if Game.DEATHFALL == false:
 					Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
 				else:
-					Game.CURRENT_SPEED.y += 250.0
+					Game.CURRENT_SPEED.y += 600.0
 			
 		else:
 			Game.CURRENT_SPEED.y = 0
@@ -141,7 +141,7 @@ func _physics_process(delta):
 				if Game.DEATHFALL == false:
 					Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
 				else:
-					Game.CURRENT_SPEED.y += 250.0
+					Game.CURRENT_SPEED.y += 600.0
 			
 		else:
 			Game.CURRENT_SPEED.y = 0
