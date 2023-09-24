@@ -1,13 +1,21 @@
-[gd_scene load_steps=22 format=3 uid="uid://cdpi8f371bd7t"]
+[gd_scene load_steps=30 format=3 uid="uid://cdpi8f371bd7t"]
 
 [ext_resource type="Script" path="res://tutorial_area/Tutorial_area.gd" id="1_a2xgr"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="1_xh7hl"]
 [ext_resource type="Texture2D" uid="uid://juxrf8cgn73w" path="res://art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="2_jyiis"]
 [ext_resource type="Texture2D" uid="uid://dvtoi0tq2cumw" path="res://Parallax Bg/sky.png" id="3_em3ms"]
+[ext_resource type="Texture2D" uid="uid://gdu1wld6m4e7" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS URBANAS 03.png" id="4_228mg"]
 [ext_resource type="Texture2D" uid="uid://ciqg2j0tgq68e" path="res://Parallax Bg/mountains.png" id="4_vmfsg"]
+[ext_resource type="Texture2D" uid="uid://817veu7ohxgf" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS URBANAS 04.png" id="5_pdgnx"]
+[ext_resource type="Texture2D" uid="uid://bkxvxq3utob3s" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS CHONCHITA 04.png" id="6_2bnbb"]
+[ext_resource type="Texture2D" uid="uid://b80guau13kjgn" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS CHONCHITA 03.png" id="7_lm6ta"]
+[ext_resource type="Texture2D" uid="uid://ocmp7t2s462y" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS CHONCHITA 02.png" id="8_hh73n"]
 [ext_resource type="PackedScene" uid="uid://can2sfinrckl7" path="res://Objects_Items/Dog.tscn" id="8_ls6ir"]
 [ext_resource type="PackedScene" uid="uid://b68yg6edebrev" path="res://Objects_Items/Cat.tscn" id="9_a2oxf"]
+[ext_resource type="Texture2D" uid="uid://ddq8wxo2e7eul" path="res://art/SPRITES/ESCENARIOS/CASAS/CASAS CHONCHITA 01.png" id="9_ksp5h"]
+[ext_resource type="Texture2D" uid="uid://c0liks7anh43a" path="res://art/SPRITES/ESCENARIOS/CASAS/CASA URBANA 03.png" id="10_hj5ug"]
 [ext_resource type="PackedScene" uid="uid://ck1wu715i125a" path="res://Objects_Items/Aligator_Area.tscn" id="10_qhlub"]
+[ext_resource type="Texture2D" uid="uid://cxeh1x8hw74tx" path="res://art/SPRITES/ESCENARIOS/CASAS/CASA URBANA 01.png" id="11_1x0bk"]
 [ext_resource type="PackedScene" uid="uid://xpr30ebgsk5v" path="res://Objects_Items/Plant.tscn" id="11_p767v"]
 [ext_resource type="Texture2D" uid="uid://g7bqrhwr2xgv" path="res://art/SPRITES/ESCENARIOS/TILESET/Fondo dephts.png" id="12_rqirb"]
 [ext_resource type="PackedScene" uid="uid://c2p3ge1p6gpfs" path="res://UserInterface/ui.tscn" id="13_2jflv"]
@@ -1473,7 +1481,7 @@ pattern_2 = SubResource("TileMapPattern_odgr4")
 
 [node name="Tutorial_area" type="Node2D"]
 script = ExtResource("1_a2xgr")
-metadata/_edit_horizontal_guides_ = [-16.0, -13.0]
+metadata/_edit_horizontal_guides_ = [-16.0, -13.0, 29.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(480, 270)
@@ -1493,12 +1501,53 @@ centered = false
 
 [node name="Mountains" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0)
-motion_mirroring = Vector2(961, 0)
+motion_mirroring = Vector2(7680, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+visible = false
 scale = Vector2(3.025, 2.24583)
 texture = ExtResource("4_vmfsg")
 centered = false
+
+[node name="CasasUrbanas03" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(304.5, 166.289)
+scale = Vector2(3.03646, 3.03646)
+texture = ExtResource("4_228mg")
+
+[node name="CasasUrbanas04" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(1015.75, 167.504)
+scale = Vector2(2.85677, 2.85677)
+texture = ExtResource("5_pdgnx")
+
+[node name="CasasChonchita04" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(1796, 251)
+scale = Vector2(3.17241, 3.17241)
+texture = ExtResource("6_2bnbb")
+
+[node name="CasasChonchita03" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(2609, 255)
+scale = Vector2(3.14655, 3.14655)
+texture = ExtResource("7_lm6ta")
+
+[node name="CasasChonchita02" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(3743, 276)
+scale = Vector2(3.12069, 3.12069)
+texture = ExtResource("8_hh73n")
+
+[node name="CasasChonchita01" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(4846.48, 266.75)
+scale = Vector2(3.16954, 3.16954)
+texture = ExtResource("9_ksp5h")
+
+[node name="CasaUrbana03" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(5836.25, 166.543)
+scale = Vector2(3.04948, 3.04948)
+texture = ExtResource("10_hj5ug")
+
+[node name="CasaUrbana01" type="Sprite2D" parent="ParallaxBackground/Mountains"]
+position = Vector2(6662.25, 169.918)
+scale = Vector2(3.0599, 3.0599)
+texture = ExtResource("11_1x0bk")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("13_2jflv")]
 
@@ -1547,4 +1596,4 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Daredevil" parent="." instance=ExtResource("1_xh7hl")]
-position = Vector2(261, 854)
+position = Vector2(104, 319)
