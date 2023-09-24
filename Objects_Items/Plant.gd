@@ -1,14 +1,14 @@
 extends Area2D
-# adds SPEED, decreases ADRENALINE
+
 @onready var timer = $Timer
-@onready var sprite = $Sprite2D
+@onready var sprite = $Plant
 
 func _on_body_entered(body):
 	if body.name == "Daredevil":
 		Game.SCORECURRENT += 500
 		Game.ADREN -= 100
-		Game.SLOWED = false
-		Game.BOOSTED = true
+		Game.SLOWED = true
+		Game.BOOSTED = false
 		sprite.hide()
 		timer.start()
 

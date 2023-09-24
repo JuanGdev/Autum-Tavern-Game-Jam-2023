@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2p3ge1p6gpfs"]
 
-[ext_resource type="Script" path="res://Objects_Items/Score_Text.gd" id="1_mywss"]
+[ext_resource type="Script" path="res://UserInterface/Score_Text.gd" id="1_mywss"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24pm5"]
 bg_color = Color(1, 0.403922, 0.607843, 0.109804)

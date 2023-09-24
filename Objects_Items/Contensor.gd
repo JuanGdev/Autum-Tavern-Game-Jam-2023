@@ -1,7 +1,7 @@
 extends Area2D
-# adds ADRENALINE, decreases SPEED
+
 @onready var timer = $Timer
-@onready var sprite = $Sprite2D
+@onready var sprite = $Contensor
 
 func _on_body_entered(body):
 	if body.name == "Daredevil":
