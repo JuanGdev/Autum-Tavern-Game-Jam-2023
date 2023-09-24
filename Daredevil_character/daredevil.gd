@@ -21,7 +21,7 @@ func _physics_process(delta):
 			if Game.DEATHFALL == false:
 				Game.CURRENT_SPEED.y = MAX_FALLING_SPEED
 			else:
-				Game.CURRENT_SPEED.y += 250
+				Game.CURRENT_SPEED.y += 250.0
 		
 	else:
 		Game.CURRENT_SPEED.y = 0
@@ -32,12 +32,12 @@ func _physics_process(delta):
 	####---Walking into running, slowing and boost---####
 	if Game.BOOSTED:
 		if Game.CURRENT_SPEED.x < SPEED_CAP:
-			Game.CURRENT_SPEED.x += 200 * delta
+			Game.CURRENT_SPEED.x += 200.0 * delta
 		else:
 			Game.CURRENT_SPEED.x = SPEED_CAP
 	elif Game.SLOWED:
 		if Game.CURRENT_SPEED.x < SLOW_SPEED:
-			Game.CURRENT_SPEED.x -= 50 * delta
+			Game.CURRENT_SPEED.x -= 50.0 * delta
 		else:
 			Game.CURRENT_SPEED.x = SLOW_SPEED	
 	elif Game.CURRENT_SPEED.x < RUNNING_SPEED:

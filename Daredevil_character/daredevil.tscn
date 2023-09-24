@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bmxxhsxpo0uae"]
 
 [ext_resource type="Script" path="res://Daredevil_character/daredevil.gd" id="1_0fwrq"]
-[ext_resource type="Texture2D" uid="uid://bo6o10l1yrb46" path="res://art/esnaque.png" id="3_x5lyj"]
+[ext_resource type="Texture2D" uid="uid://clqd08inxea82" path="res://art/esnaque.png" id="3_x5lyj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8a0li"]
 custom_solver_bias = 0.097
