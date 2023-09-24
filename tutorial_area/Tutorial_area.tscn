@@ -1517,9 +1517,18 @@ position_smoothing_speed = 8.0
 motion_scale = Vector2(0, 0)
 
 [node name="CieloMorado" type="Sprite2D" parent="ParallaxBackground/Sky"]
-position = Vector2(479.333, 271.5)
-scale = Vector2(1.98889, 1.98889)
+position = Vector2(481, 269.5)
+scale = Vector2(1.99583, 2.0037)
 texture = ExtResource("2_qhahi")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(910, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(3.025, 2.24583)
+texture = ExtResource("4_vmfsg")
+centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 1)
@@ -1612,12 +1621,6 @@ texture = ExtResource("23_mxir5")
 [node name="Houses_Foreground" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(1.095, 1)
 motion_mirroring = Vector2(7680, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Houses_Foreground"]
-visible = false
-scale = Vector2(3.025, 2.24583)
-texture = ExtResource("4_vmfsg")
-centered = false
 
 [node name="CasasUrbanas03" type="Sprite2D" parent="ParallaxBackground/Houses_Foreground"]
 position = Vector2(304.5, 279.289)
