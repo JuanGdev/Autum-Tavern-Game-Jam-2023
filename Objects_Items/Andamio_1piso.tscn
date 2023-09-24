@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bja2ggw4y3irc"]
+
+[ext_resource type="Texture2D" uid="uid://bcj1vepcjksl1" path="res://art/SPRITES/OBJETOS/ANDAMIO.png" id="1_sl3do"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcvsb"]
+size = Vector2(108, 4)
+
+[node name="Andamio_1piso" type="Sprite2D"]
+position = Vector2(72, -26.25)
+scale = Vector2(2.125, 1.47297)
+texture = ExtResource("1_sl3do")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, -10)
+shape = SubResource("RectangleShape2D_vcvsb")
+one_way_collision = true

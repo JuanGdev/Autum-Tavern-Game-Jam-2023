@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmxxhsxpo0uae"]
+[gd_scene load_steps=21 format=3 uid="uid://bmxxhsxpo0uae"]
 
 [ext_resource type="Script" path="res://Daredevil_character/daredevil.gd" id="1_0fwrq"]
+[ext_resource type="Texture2D" uid="uid://d03pgngmslfva" path="res://art/SPRITES/PERSONAJES/concept_p1_gamejam-Sheet.png" id="3_rjbhb"]
 [ext_resource type="Texture2D" uid="uid://clqd08inxea82" path="res://art/esnaque.png" id="3_x5lyj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8a0li"]
@@ -20,9 +21,33 @@ region = Rect2(37, 0, 37, 63)
 atlas = ExtResource("3_x5lyj")
 region = Rect2(0, 189, 37, 63)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lc132"]
-atlas = ExtResource("3_x5lyj")
-region = Rect2(0, 126, 37, 63)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ec1i"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5csf7"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mynhf"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul78o"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed2l1"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgv8m"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nmol"]
+atlas = ExtResource("3_rjbhb")
+region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsuv6"]
 atlas = ExtResource("3_x5lyj")
@@ -67,7 +92,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lc132")
+"texture": SubResource("AtlasTexture_5ec1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5csf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mynhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul78o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed2l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgv8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nmol")
 }],
 "loop": true,
 "name": &"run",
@@ -104,4 +147,4 @@ shape = SubResource("CapsuleShape2D_8a0li")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rhkr2")
-animation = &"walk"
+animation = &"run"

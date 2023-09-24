@@ -5,7 +5,7 @@ class_name Daredevil
 const RUNNING_SPEED = 500.0
 const SPEED_CAP = 800.0
 const SLOW_SPEED = 250.0
-const MAX_FALLING_SPEED = 200.0
+const MAX_FALLING_SPEED = 400.0
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

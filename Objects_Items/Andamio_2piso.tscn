@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnrdmbv8qln2d"]
+
+[ext_resource type="Texture2D" uid="uid://bcj1vepcjksl1" path="res://art/SPRITES/OBJETOS/ANDAMIO.png" id="1_kg3kw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcvsb"]
+size = Vector2(108, 4)
+
+[node name="Andamio2pisos" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Andamio_piso2" type="Sprite2D" parent="."]
+position = Vector2(205, -71.9155)
+scale = Vector2(4.51563, 2.16964)
+texture = ExtResource("1_kg3kw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Andamio_piso2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Andamio_piso2/StaticBody2D"]
+position = Vector2(-3, -10)
+shape = SubResource("RectangleShape2D_vcvsb")
+one_way_collision = true
+
+[node name="Andamio_piso1" type="Sprite2D" parent="."]
+position = Vector2(205, -282)
+scale = Vector2(4.516, 2.17)
+texture = ExtResource("1_kg3kw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Andamio_piso1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Andamio_piso1/StaticBody2D"]
+position = Vector2(-3, -10)
+shape = SubResource("RectangleShape2D_vcvsb")
+one_way_collision = true
