@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Jam Template 4"
-run/main_scene="res://tutorial_area/Tutorial_area.tscn"
+run/main_scene="res://TitleScreen/Main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.png"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 Game="*res://Global/Game.gd"
 Utils="*res://Global/Utils.gd"
+SceneTransition="*res://TitleScreen/scene_transition.tscn"
 
 [display]
 

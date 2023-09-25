@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://pqkwvr7hob62"]
+
+[ext_resource type="Script" path="res://TitleScreen/credits.gd" id="1_2nhe0"]
+[ext_resource type="FontFile" uid="uid://cac4f4eaojwso" path="res://TitleScreen/Flinders Trials.ttf" id="1_oyth0"]
+
+[sub_resource type="Animation" id="Animation_vq6cy"]
+resource_name = "runCredits"
+length = 10.0
+step = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.96282),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(454, 2800), Vector2(454, -3000)]
+}
+
+[sub_resource type="Animation" id="Animation_isnvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(454, -2500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bbkfg"]
+resource_name = "dissolve"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99651),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(454, 1093)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rihp0"]
+_data = {
+"RESET": SubResource("Animation_isnvw"),
+"dissolve": SubResource("Animation_bbkfg"),
+"runCredits": SubResource("Animation_vq6cy")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nhe0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.3673, 27.2806)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = -2500.0
+offset_right = 1423.0
+offset_bottom = 804.0
+theme_override_colors/font_shadow_color = Color(0.180392, 0.329412, 0.917647, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_oyth0")
+theme_override_font_sizes/font_size = 91
+text = "Art
+Gerardo Acosta
+ElWeroBalazos
+
+Main character design
+Gerardo Acosta
+
+Programming
+Alexcavadora
+Isaac Salas
+Juan Aguilera
+
+Gameplay programming:
+Alexcavadora
+Isaac Salas
+
+UI
+Juan Aguilera
+
+
+
+
+
+
+
+
+
+Thanks for playing!"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+libraries = {
+"": SubResource("AnimationLibrary_rihp0")
+}

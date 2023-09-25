@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://comfr1yplxmt1"]
+[gd_scene load_steps=5 format=3 uid="uid://comfr1yplxmt1"]
 
 [ext_resource type="Script" path="res://TitleScreen/Main.gd" id="1_jbmad"]
+[ext_resource type="FontFile" uid="uid://cac4f4eaojwso" path="res://TitleScreen/Flinders Trials.ttf" id="2_apemy"]
+[ext_resource type="PackedScene" uid="uid://cr58nmheclpsl" path="res://TitleScreen/scene_transition.tscn" id="3_sb2tx"]
+
+[sub_resource type="FontVariation" id="FontVariation_hgneo"]
+base_font = ExtResource("2_apemy")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_jbmad")
@@ -10,16 +15,34 @@ offset_left = 593.0
 offset_top = 284.0
 offset_right = 1374.0
 offset_bottom = 687.0
+theme_override_colors/font_hover_color = Color(0.207843, 0.541176, 0.937255, 1)
+theme_override_fonts/font = SubResource("FontVariation_hgneo")
 theme_override_font_sizes/font_size = 100
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 1453.0
-offset_top = 880.0
-offset_right = 1837.0
-offset_bottom = 1025.0
+offset_left = 1352.0
+offset_top = 772.0
+offset_right = 1852.0
+offset_bottom = 1072.0
+scale = Vector2(1.113, 1)
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[node name="test" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 780.0
+offset_right = 583.0
+offset_bottom = 1080.0
+scale = Vector2(1.113, 1)
+theme_override_colors/font_hover_color = Color(0.207843, 0.541176, 0.937255, 1)
+theme_override_fonts/font = SubResource("FontVariation_hgneo")
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+
+[node name="SceneTransition" parent="." instance=ExtResource("3_sb2tx")]
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="test" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="test" to="." method="_on_test_pressed"]
