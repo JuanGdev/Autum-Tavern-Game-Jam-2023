@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://can2sfinrckl7"]
+[gd_scene load_steps=15 format=3 uid="uid://can2sfinrckl7"]
 
 [ext_resource type="Script" path="res://Objects_Items/Dog.gd" id="1_y87sk"]
-[ext_resource type="Texture2D" uid="uid://bp26u31hm7p66" path="res://art/SPRITES/OBJETOS/PERRO-ANIMADO.png" id="2_kc6vx"]
+[ext_resource type="Texture2D" uid="uid://c6umeexsm6ojj" path="res://art/SPRITES/OBJETOS/PERRO-ANIMADO.png" id="2_kc6vx"]
+[ext_resource type="AudioStream" uid="uid://bohdaj74rwfeb" path="res://Sounds/ES_Impact Punch Face 2 - SFX Producer.mp3" id="3_qfo47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwhjh"]
 size = Vector2(53, 54)
@@ -94,6 +95,9 @@ wait_time = 2.5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w5u5w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qfo47")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

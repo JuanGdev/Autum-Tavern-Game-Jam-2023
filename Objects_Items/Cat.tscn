@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://b68yg6edebrev"]
+[gd_scene load_steps=17 format=3 uid="uid://b68yg6edebrev"]
 
 [ext_resource type="Script" path="res://Objects_Items/Cat.gd" id="1_dp6f1"]
-[ext_resource type="Texture2D" uid="uid://dunehld63sycm" path="res://art/SPRITES/OBJETOS/GATO-ANIMADO.png" id="3_vj2e8"]
+[ext_resource type="Texture2D" uid="uid://73i3ubbmafa6" path="res://art/SPRITES/OBJETOS/GATO-ANIMADO.png" id="3_vj2e8"]
+[ext_resource type="AudioStream" uid="uid://bvqa2d6peisfj" path="res://Sounds/ES_Impact Punch Face 6 - SFX Producer.mp3" id="3_waj1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r0pv"]
 size = Vector2(45, 50)
@@ -110,6 +111,9 @@ one_shot = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -4)
 sprite_frames = SubResource("SpriteFrames_yn68b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_waj1d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,16 +1,18 @@
-[gd_scene load_steps=90 format=3 uid="uid://bmxxhsxpo0uae"]
+[gd_scene load_steps=92 format=3 uid="uid://bmxxhsxpo0uae"]
 
 [ext_resource type="Script" path="res://Daredevil_character/daredevil.gd" id="1_0fwrq"]
-[ext_resource type="Texture2D" uid="uid://b4r1sxr32tvpx" path="res://art/SPRITES/PERSONAJES/muerte animacion-Sheet.png" id="2_1ey8e"]
-[ext_resource type="Texture2D" uid="uid://cxkd03gealtjx" path="res://art/SPRITES/PERSONAJES/salto_animacion_gamejam-Sheet.png" id="3_6pnws"]
-[ext_resource type="Texture2D" uid="uid://dn74kuui8ka6c" path="res://art/SPRITES/PERSONAJES/concept_p1_gamejam-Sheet.png" id="3_rjbhb"]
-[ext_resource type="Texture2D" uid="uid://dkytkbnwwsn8m" path="res://art/esnaque.png" id="3_x5lyj"]
-[ext_resource type="Texture2D" uid="uid://dxtvtkrjrumyv" path="res://art/SPRITES/PERSONAJES/GUSANITO.png" id="4_8bibf"]
-[ext_resource type="Texture2D" uid="uid://duy8vlqxk6rp5" path="res://art/SPRITES/PERSONAJES/consumir_animaxcion-Sheet.png" id="6_mdql2"]
-[ext_resource type="Texture2D" uid="uid://ceqtpay63ikn8" path="res://art/SPRITES/PERSONAJES/animacion_deslizar-Sheet.png" id="8_ge12u"]
-[ext_resource type="Texture2D" uid="uid://bw3opa4iq48bd" path="res://art/SPRITES/PERSONAJES/lanzar_animacion-Sheet.png" id="8_jislb"]
-[ext_resource type="Texture2D" uid="uid://c40gnggalv585" path="res://art/SPRITES/PERSONAJES/caminar_aniamcion_gamejam-Sheet.png" id="9_sc3bq"]
-[ext_resource type="Texture2D" uid="uid://cj4eo612bph7k" path="res://art/SPRITES/PERSONAJES/ANIMACIÓN SILLITA DE RUEDAS.png" id="10_p0a4a"]
+[ext_resource type="Texture2D" uid="uid://dvc33gtsk3812" path="res://art/SPRITES/PERSONAJES/muerte animacion-Sheet.png" id="2_1ey8e"]
+[ext_resource type="Texture2D" uid="uid://duo2rdvunrae6" path="res://art/SPRITES/PERSONAJES/salto_animacion_gamejam-Sheet.png" id="3_6pnws"]
+[ext_resource type="Texture2D" uid="uid://cxngwamyisvef" path="res://art/SPRITES/PERSONAJES/concept_p1_gamejam-Sheet.png" id="3_rjbhb"]
+[ext_resource type="Texture2D" uid="uid://24vsbf1d7hol" path="res://art/esnaque.png" id="3_x5lyj"]
+[ext_resource type="Texture2D" uid="uid://ce6v3pi0il7wo" path="res://art/SPRITES/PERSONAJES/GUSANITO.png" id="4_8bibf"]
+[ext_resource type="Texture2D" uid="uid://cj42hkjl1la8" path="res://art/SPRITES/PERSONAJES/consumir_animaxcion-Sheet.png" id="6_mdql2"]
+[ext_resource type="Texture2D" uid="uid://b3b04wcp4ew8a" path="res://art/SPRITES/PERSONAJES/animacion_deslizar-Sheet.png" id="8_ge12u"]
+[ext_resource type="Texture2D" uid="uid://br60ew08tirh4" path="res://art/SPRITES/PERSONAJES/lanzar_animacion-Sheet.png" id="8_jislb"]
+[ext_resource type="Texture2D" uid="uid://dreg2qrgud0hu" path="res://art/SPRITES/PERSONAJES/caminar_aniamcion_gamejam-Sheet.png" id="9_sc3bq"]
+[ext_resource type="Texture2D" uid="uid://kw0objmdcoho" path="res://art/SPRITES/PERSONAJES/ANIMACIÓN SILLITA DE RUEDAS.png" id="10_p0a4a"]
+[ext_resource type="AudioStream" uid="uid://juw7dsh85xqw" path="res://Sounds/ES_Footsteps Grass 1 - SFX Producer.mp3" id="12_yltm2"]
+[ext_resource type="AudioStream" uid="uid://5d0j2to2m56d" path="res://Sounds/ES_Video Game Jump Play - SFX Producer.mp3" id="13_ywsvs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8a0li"]
 custom_solver_bias = 0.097
@@ -620,5 +622,11 @@ shape = SubResource("CapsuleShape2D_8a0li")
 position = Vector2(39, -25)
 sprite_frames = SubResource("SpriteFrames_rhkr2")
 animation = &"fall"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_yltm2")
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_ywsvs")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

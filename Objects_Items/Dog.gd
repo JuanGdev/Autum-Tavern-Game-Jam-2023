@@ -7,6 +7,7 @@ func _ready():
 	sprite.play("default")
 
 func _on_body_entered(body):
+	$AudioStreamPlayer2D.play()
 	if body.name == "Daredevil":
 		Game.SCORECURRENT += 500
 		Game.ADREN -= 100

@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://comfr1yplxmt1"]
+[gd_scene load_steps=9 format=3 uid="uid://comfr1yplxmt1"]
 
 [ext_resource type="Script" path="res://TitleScreen/Main.gd" id="1_jbmad"]
-[ext_resource type="FontFile" uid="uid://b0hlc27b14m7u" path="res://TitleScreen/Flinders Trials.ttf" id="2_apemy"]
+[ext_resource type="FontFile" uid="uid://v1sc704v0kbg" path="res://TitleScreen/Flinders Trials.ttf" id="2_apemy"]
+[ext_resource type="Texture2D" uid="uid://bbnkseq71reg3" path="res://art/SPRITES/ESCENARIOS/FONDO/CIELO MORADO.png" id="2_h4ous"]
 [ext_resource type="PackedScene" uid="uid://cr58nmheclpsl" path="res://TitleScreen/scene_transition.tscn" id="3_sb2tx"]
+[ext_resource type="AudioStream" uid="uid://e6llc32mgxbk" path="res://Sounds/BotonesUI.mp3" id="4_7bqc1"]
+[ext_resource type="AudioStream" uid="uid://dh47s458dc35p" path="res://Sounds/ES_No Chill - Wesky Main Scene.mp3" id="5_ubytx"]
+[ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="6_1bhuf"]
 
 [sub_resource type="FontVariation" id="FontVariation_hgneo"]
 base_font = ExtResource("2_apemy")
@@ -10,39 +14,65 @@ base_font = ExtResource("2_apemy")
 [node name="Main" type="Node2D"]
 script = ExtResource("1_jbmad")
 
-[node name="Play" type="Button" parent="."]
-offset_left = 593.0
-offset_top = 284.0
-offset_right = 1374.0
-offset_bottom = 687.0
-theme_override_colors/font_hover_color = Color(0.207843, 0.541176, 0.937255, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(958, 537)
+scale = Vector2(4.00213, 4.00213)
+texture = ExtResource("2_h4ous")
+
+[node name="bottonUI" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7bqc1")
+
+[node name="Play" type="Button" parent="bottonUI"]
+offset_left = 707.0
+offset_top = 777.0
+offset_right = 1488.0
+offset_bottom = 1180.0
+scale = Vector2(0.619756, 0.619756)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_hover_color = Color(0.486275, 0, 0.627451, 1)
 theme_override_fonts/font = SubResource("FontVariation_hgneo")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 260
 text = "Play"
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 1352.0
-offset_top = 772.0
-offset_right = 1852.0
-offset_bottom = 1072.0
+[node name="Quit" type="Button" parent="bottonUI"]
+offset_left = 1360.0
+offset_top = 777.0
+offset_right = 1860.0
+offset_bottom = 1077.0
 scale = Vector2(1.113, 1)
-theme_override_font_sizes/font_size = 50
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_apemy")
+theme_override_font_sizes/font_size = 110
 text = "Quit"
 
-[node name="test" type="Button" parent="."]
-offset_left = 83.0
-offset_top = 780.0
-offset_right = 583.0
-offset_bottom = 1080.0
+[node name="test" type="Button" parent="bottonUI"]
+offset_left = -3.0
+offset_top = 777.0
+offset_right = 497.0
+offset_bottom = 1077.0
 scale = Vector2(1.113, 1)
+size_flags_vertical = 8
 theme_override_colors/font_hover_color = Color(0.207843, 0.541176, 0.937255, 1)
 theme_override_fonts/font = SubResource("FontVariation_hgneo")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 110
 text = "Credits"
 
 [node name="SceneTransition" parent="." instance=ExtResource("3_sb2tx")]
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="test" to="." method="_on_test_pressed"]
-[connection signal="pressed" from="test" to="." method="_on_play_pressed"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ubytx")
+
+[node name="Daredevil" parent="." instance=ExtResource("6_1bhuf")]
+position = Vector2(44, 175)
+scale = Vector2(7.01342, 7.01342)
+motion_mode = 1
+
+[node name="Daredevil" parent="Daredevil" instance=ExtResource("6_1bhuf")]
+position = Vector2(136.025, -0.998093)
+scale = Vector2(0.408001, 0.408001)
+
+[connection signal="pressed" from="bottonUI/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="bottonUI/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="bottonUI/test" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="bottonUI/test" to="." method="_on_test_pressed"]
