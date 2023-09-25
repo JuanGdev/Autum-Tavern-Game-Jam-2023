@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2p3ge1p6gpfs"]
+[gd_scene load_steps=10 format=3 uid="uid://c2p3ge1p6gpfs"]
 
+[ext_resource type="Script" path="res://UserInterface/Adrenaline_Text.gd" id="1_5jcfu"]
+[ext_resource type="Texture2D" uid="uid://duo226ngd3t8g" path="res://art/SPRITES/ESCENARIOS/UI/THE BARRITA.png" id="1_k5n16"]
 [ext_resource type="Script" path="res://Objects_Items/Score_Text.gd" id="1_mywss"]
+[ext_resource type="Texture2D" uid="uid://c58isf3vfmyxv" path="res://art/SPRITES/ESCENARIOS/UI/BARRITA.png" id="2_axcex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24pm5"]
 bg_color = Color(1, 0.403922, 0.607843, 0.109804)
@@ -22,6 +25,11 @@ bg_color = Color(1, 0.243137, 0.270588, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
+[node name="ON_Fire" type="Sprite2D" parent="."]
+position = Vector2(321.25, 32)
+scale = Vector2(2.35507, 1.7)
+texture = ExtResource("1_k5n16")
+
 [node name="Adrenaline" type="ProgressBar" parent="."]
 anchors_preset = -1
 anchor_left = -0.523
@@ -39,12 +47,18 @@ value = 1000.0
 show_percentage = false
 script = SubResource("GDScript_0cpjf")
 
+[node name="Barrita" type="Sprite2D" parent="."]
+position = Vector2(264, 26)
+scale = Vector2(2.17073, 1.42857)
+texture = ExtResource("2_axcex")
+
 [node name="Adrenaline_Text" type="Label" parent="."]
 offset_left = 231.0
 offset_top = 20.0
 offset_right = 316.0
 offset_bottom = 46.0
 text = "Adrenalina"
+script = ExtResource("1_5jcfu")
 
 [node name="Score_Text" type="Label" parent="."]
 offset_left = 1581.0
