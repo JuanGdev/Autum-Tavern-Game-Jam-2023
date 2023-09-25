@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://4ke16d54yc6p"]
+[gd_scene load_steps=8 format=3 uid="uid://4ke16d54yc6p"]
 
 [ext_resource type="Texture2D" uid="uid://43bjtpi2j3vf" path="res://art/WinScreen.png" id="1_oeliy"]
 [ext_resource type="Script" path="res://TitleScreen/winScene.gd" id="1_rryoo"]
+[ext_resource type="AudioStream" uid="uid://dd0alo0w8nrg7" path="res://Sounds/ES_Squeak Toy Large 6 - SFX Producer.mp3" id="3_ofhyq"]
+[ext_resource type="AudioStream" uid="uid://bdy7gfbeoiuxd" path="res://Sounds/ES_Waltz with Me Again - Franz Gordon.mp3" id="4_ande5"]
 
 [sub_resource type="Animation" id="Animation_5ecnn"]
 resource_name = "winAnimation"
@@ -59,3 +61,12 @@ texture = ExtResource("1_oeliy")
 libraries = {
 "": SubResource("AnimationLibrary_oo3cb")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ofhyq")
+volume_db = -23.423
+pitch_scale = 0.21
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D"]
+stream = ExtResource("4_ande5")
+volume_db = 0.872

@@ -3,6 +3,9 @@ extends Node2D
 @onready var camera = $Camera2D
 @onready var character = $Daredevil
 
+func _ready():
+	$Camera2D/AudioStreamPlayer2D.play()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	camera.position.x = character.position.x + 375

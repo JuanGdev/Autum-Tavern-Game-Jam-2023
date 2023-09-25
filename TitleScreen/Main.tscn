@@ -15,7 +15,7 @@ base_font = ExtResource("2_apemy")
 script = ExtResource("1_jbmad")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(958, 534)
+position = Vector2(958, 537)
 scale = Vector2(4.00213, 4.00213)
 texture = ExtResource("2_h4ous")
 

@@ -5,3 +5,5 @@ extends Control
 func _ready():
 	$Sprite2D/AnimationPlayer.play("RESET")
 	$Sprite2D/AnimationPlayer.play("winAnimation")
+	$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D/AudioStreamPlayer2D.play()
