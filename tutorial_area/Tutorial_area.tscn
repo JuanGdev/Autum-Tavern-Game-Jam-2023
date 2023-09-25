@@ -1837,10 +1837,10 @@ position = Vector2(5895, 427)
 position = Vector2(5463, 422)
 
 [node name="Cone3" parent="." instance=ExtResource("13_fn442")]
-position = Vector2(1041, 429)
+position = Vector2(782, 434)
 
 [node name="Cone4" parent="." instance=ExtResource("13_fn442")]
-position = Vector2(1086, 430)
+position = Vector2(830, 434)
 
 [node name="Andamio_1piso2" parent="." instance=ExtResource("49_o2txb")]
 position = Vector2(6255, 379)
@@ -1972,10 +1972,76 @@ position = Vector2(5201, 167)
 position = Vector2(5404, 55)
 
 [node name="Dog10" parent="." instance=ExtResource("8_ls6ir")]
-position = Vector2(984, 425)
+position = Vector2(1140, 384)
 
 [node name="Dog11" parent="." instance=ExtResource("8_ls6ir")]
-position = Vector2(1131, 425)
+position = Vector2(1124, 428)
 
 [node name="Dog12" parent="." instance=ExtResource("8_ls6ir")]
-position = Vector2(1181, 426)
+position = Vector2(1163, 428)
+
+[node name="Dog13" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1180, 382)
+
+[node name="Dog14" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1201, 428)
+
+[node name="Dog15" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1157, 335)
+
+[node name="Dog16" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1242, 428)
+
+[node name="Dog17" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1218, 381)
+
+[node name="Dog18" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1199, 335)
+
+[node name="Dog19" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1175, 287)
+
+[node name="Dog20" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1292, 428)
+
+[node name="Dog21" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1264, 379)
+
+[node name="Dog22" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1244, 334)
+
+[node name="Dog23" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1225, 286)
+
+[node name="Dog24" parent="." instance=ExtResource("8_ls6ir")]
+position = Vector2(1199, 241)
+
+[node name="Cone13" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1849, 435)
+
+[node name="Cone14" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1890, 436)
+
+[node name="Cone15" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1923, 436)
+
+[node name="Cone16" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1873, 403)
+
+[node name="Cone17" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1910, 403)
+
+[node name="Cone18" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1890, 371)
+
+[node name="Cone19" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1963, 436)
+
+[node name="Cone20" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1947, 403)
+
+[node name="Cone21" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1933, 369)
+
+[node name="Cone22" parent="." instance=ExtResource("13_fn442")]
+position = Vector2(1909, 339)

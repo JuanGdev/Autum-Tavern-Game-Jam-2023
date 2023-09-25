@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnrdmbv8qln2d"]
 
-[ext_resource type="Texture2D" uid="uid://bcj1vepcjksl1" path="res://art/SPRITES/OBJETOS/ANDAMIO.png" id="1_kg3kw"]
+[ext_resource type="Texture2D" uid="uid://d2mpya8d756u6" path="res://art/SPRITES/OBJETOS/ANDAMIO.png" id="1_kg3kw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcvsb"]
 size = Vector2(108, 4)
