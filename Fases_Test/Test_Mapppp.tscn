@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dm1lkjhwjrbge"]
 
-[ext_resource type="Texture2D" uid="uid://srjt5xgkj6v3" path="res://art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="1_yaufw"]
+[ext_resource type="Texture2D" uid="uid://tvorobyvhrw0" path="res://art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="1_yaufw"]
 [ext_resource type="PackedScene" uid="uid://bmxxhsxpo0uae" path="res://Daredevil_character/daredevil.tscn" id="2_spulx"]
 [ext_resource type="PackedScene" uid="uid://c2p3ge1p6gpfs" path="res://UserInterface/ui.tscn" id="3_p3y7d"]
 [ext_resource type="PackedScene" uid="uid://nvwyd2goi126" path="res://Objects_Items/Sewer.tscn" id="4_boluh"]

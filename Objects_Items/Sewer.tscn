@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://nvwyd2goi126"]
 
 [ext_resource type="Script" path="res://Objects_Items/Sewer.gd" id="1_yinhj"]
-[ext_resource type="Texture2D" uid="uid://yepm3rar3ue4" path="res://art/SPRITES/OBJETOS/ALCANTARILLA.png" id="2_vwhpi"]
-[ext_resource type="Texture2D" uid="uid://c7ppe5prn1tmk" path="res://art/SPRITES/OBJETOS/ALCANTARILLA ABIERTA.png" id="3_8wyka"]
+[ext_resource type="Texture2D" uid="uid://dqnprofxxc2s3" path="res://art/SPRITES/OBJETOS/ALCANTARILLA.png" id="2_vwhpi"]
+[ext_resource type="Texture2D" uid="uid://dwm31ss0e65k" path="res://art/SPRITES/OBJETOS/ALCANTARILLA ABIERTA.png" id="3_8wyka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gnfke"]
 size = Vector2(128, 812)

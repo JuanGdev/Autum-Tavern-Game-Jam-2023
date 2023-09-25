@@ -1,4 +1,4 @@
-xtends CharacterBody2D
+extends CharacterBody2D
 @onready var playerCamera = $Camera2D
 
 func _physics_process(delta):

@@ -17,7 +17,6 @@ func _physics_process(delta):
 	if Game.ADREN == 0:
 		Game.HEALTH = Game.HEALTH+1
 		Game.ADREN = 1000
-	
 	if Game.HEALTH == 1:
 		
 		####-----------------jump and fall-----------------####
@@ -63,13 +62,13 @@ func _physics_process(delta):
 		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
 			anim.play("idle")
 		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-			anim.play("run")
+				anim.play("run")
+		elif Game.CURRENT_SPEED.y < 0:
+			anim.play("jump")
+		elif Game.CURRENT_SPEED.y > 0:
+			anim.play("fall")
 		else:
 			anim.play("walk")
-		if Game.CURRENT_SPEED.y < 0:
-			anim.play("jump")
-		if Game.CURRENT_SPEED.y > 0:
-			anim.play("jump")
 			
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED
@@ -119,13 +118,13 @@ func _physics_process(delta):
 		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
 			anim.play("idle")
 		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-			anim.play("run")
+				anim.play("run")
+		elif Game.CURRENT_SPEED.y < 0:
+			anim.play("jump")
+		elif Game.CURRENT_SPEED.y > 0:
+			anim.play("fall")
 		else:
 			anim.play("walk")
-		if Game.CURRENT_SPEED.y < 0:
-			anim.play("jump")
-		if Game.CURRENT_SPEED.y > 0:
-			anim.play("jump")
 			
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED
@@ -176,13 +175,13 @@ func _physics_process(delta):
 		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
 			anim.play("idle")
 		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-			anim.play("run")
+				anim.play("run")
+		elif Game.CURRENT_SPEED.y < 0:
+			anim.play("jump")
+		elif Game.CURRENT_SPEED.y > 0:
+			anim.play("fall")
 		else:
 			anim.play("walk")
-		if Game.CURRENT_SPEED.y < 0:
-			anim.play("jump")
-		if Game.CURRENT_SPEED.y > 0:
-			anim.play("jump")
 			
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED

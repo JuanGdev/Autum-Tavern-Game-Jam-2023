@@ -1,16 +1,89 @@
-[gd_scene load_steps=4 format=3 uid="uid://can2sfinrckl7"]
+[gd_scene load_steps=14 format=3 uid="uid://can2sfinrckl7"]
 
 [ext_resource type="Script" path="res://Objects_Items/Dog.gd" id="1_y87sk"]
-[ext_resource type="Texture2D" uid="uid://dx7nyjd2fte4a" path="res://art/SPRITES/OBJETOS/PERRO.png" id="2_t5scp"]
+[ext_resource type="Texture2D" uid="uid://bp26u31hm7p66" path="res://art/SPRITES/OBJETOS/PERRO-ANIMADO.png" id="2_kc6vx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwhjh"]
 size = Vector2(53, 54)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n08yk"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcybv"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0arr4"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwnh0"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgmdg"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah30l"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x21hl"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4uis"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu8hk"]
+atlas = ExtResource("2_kc6vx")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5u5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n08yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcybv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0arr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwnh0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgmdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ah30l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x21hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4uis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu8hk")
+}],
+"loop": true,
+"name": &"pet",
+"speed": 5.0
+}]
+
 [node name="Dog" type="Area2D"]
 script = ExtResource("1_y87sk")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_t5scp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5.5, 0)
@@ -18,6 +91,9 @@ shape = SubResource("RectangleShape2D_hwhjh")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w5u5w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
