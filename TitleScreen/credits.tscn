@@ -1,24 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://pqkwvr7hob62"]
 
 [ext_resource type="Script" path="res://TitleScreen/credits.gd" id="1_2nhe0"]
-[ext_resource type="FontFile" uid="uid://cac4f4eaojwso" path="res://TitleScreen/Flinders Trials.ttf" id="1_oyth0"]
-
-[sub_resource type="Animation" id="Animation_vq6cy"]
-resource_name = "runCredits"
-length = 10.0
-step = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 9.96282),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(454, 2800), Vector2(454, -3000)]
-}
+[ext_resource type="FontFile" uid="uid://v1sc704v0kbg" path="res://TitleScreen/Flinders Trials.ttf" id="1_oyth0"]
 
 [sub_resource type="Animation" id="Animation_isnvw"]
 length = 0.001
@@ -75,6 +58,23 @@ tracks/1/keys = {
 "values": [Vector2(454, 1093)]
 }
 
+[sub_resource type="Animation" id="Animation_vq6cy"]
+resource_name = "runCredits"
+length = 15.0
+step = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(454, 2800), Vector2(454, -3000)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rihp0"]
 _data = {
 "RESET": SubResource("Animation_isnvw"),
@@ -103,15 +103,15 @@ layout_mode = 0
 offset_left = 454.0
 offset_top = -2500.0
 offset_right = 1423.0
-offset_bottom = 804.0
+offset_bottom = 1040.0
 theme_override_colors/font_shadow_color = Color(0.180392, 0.329412, 0.917647, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("1_oyth0")
 theme_override_font_sizes/font_size = 91
 text = "Art
-Gerardo Acosta
 ElWeroBalazos
+Gerardo Acosta
 
 Main character design
 Gerardo Acosta
@@ -136,7 +136,9 @@ Juan Aguilera
 
 
 
-Thanks for playing!"
+Thanks for playing!
+AUTUMN TAVERN JAM
+by Luigi Salas"
 horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
