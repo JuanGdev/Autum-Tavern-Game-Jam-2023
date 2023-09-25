@@ -7,7 +7,7 @@ extends Node2D
 func _process(_delta):
 	camera.position.x = character.position.x + 375
 	camera.position.y = character.position.y - 50
-	Game.ADREN -= 0.2
+	Game.ADREN -= 1
 	if Game.ADREN > 1100:
 		Game.ADREN = 1100
 

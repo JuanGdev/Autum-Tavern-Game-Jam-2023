@@ -10,13 +10,15 @@ const MAX_FALLING_SPEED = 400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
-@onready var anim = get_node("AnimatedSprite2D")
+@onready var anim = $AnimatedSprite2D
 	
 func _physics_process(delta):
 	
 	if Game.ADREN == 0:
-		Game.HEALTH = Game.HEALTH+1
+		Game.HEALTH =+ 1
 		Game.ADREN = 1000
+	if Game.ADREN > 1000 and Game.HEALTH > 1:
+		Game.HEALTH -= 1
 	if Game.HEALTH == 1:
 		
 		####-----------------jump and fall-----------------####
@@ -54,22 +56,25 @@ func _physics_process(delta):
 		
 
 		####-----------------ANIMATION-----------------####
-		if Game.CURRENT_SPEED.x < 0:
+		if Game.CURRENT_SPEED.x < 0.0:
 			get_node("AnimatedSprite2D").flip_h = true
 		else:
 			get_node("AnimatedSprite2D").flip_h = false
 		
-		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
+		if Game.CURRENT_SPEED.x == 0.0 and is_on_floor():
 			anim.play("idle")
-		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-				anim.play("run")
-		elif Game.CURRENT_SPEED.y < 0:
+		elif Game.CURRENT_SPEED.x >= RUNNING_SPEED and is_on_floor():
+			anim.play("run")
+		elif Game.CURRENT_SPEED.y < 0.0:
 			anim.play("jump")
-		elif Game.CURRENT_SPEED.y > 0:
+			if anim.frame == 2:
+				anim.pause()		
+		elif Game.CURRENT_SPEED.y > 0.0:
 			anim.play("fall")
-		else:
+			if anim.frame == 1:
+				anim.pause()
+		elif Game.CURRENT_SPEED.x < RUNNING_SPEED:
 			anim.play("walk")
-			
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED
 		move_and_slide()
@@ -110,22 +115,7 @@ func _physics_process(delta):
 		
 
 		####-----------------ANIMATION-----------------####
-		if Game.CURRENT_SPEED.x < 0:
-			get_node("AnimatedSprite2D").flip_h = true
-		else:
-			get_node("AnimatedSprite2D").flip_h = false
-		
-		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
-			anim.play("idle")
-		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-				anim.play("run")
-		elif Game.CURRENT_SPEED.y < 0:
-			anim.play("jump")
-		elif Game.CURRENT_SPEED.y > 0:
-			anim.play("fall")
-		else:
-			anim.play("walk")
-			
+		anim.play("wheelchair")
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED
 		move_and_slide()
@@ -167,22 +157,12 @@ func _physics_process(delta):
 		
 
 		####-----------------ANIMATION-----------------####
-		if Game.CURRENT_SPEED.x < 0:
-			get_node("AnimatedSprite2D").flip_h = true
-		else:
-			get_node("AnimatedSprite2D").flip_h = false
-		
-		if Game.CURRENT_SPEED.x == 0 && Game.CURRENT_SPEED.y == 0:
-			anim.play("idle")
-		elif Game.CURRENT_SPEED.x == RUNNING_SPEED:
-				anim.play("run")
-		elif Game.CURRENT_SPEED.y < 0:
-			anim.play("jump")
-		elif Game.CURRENT_SPEED.y > 0:
-			anim.play("fall")
-		else:
-			anim.play("walk")
-			
+		anim.play("gusanito")
 		#use global variable to move character
 		velocity = Game.CURRENT_SPEED
 		move_and_slide()
+
+
+func _on_animated_sprite_2d_animation_finished(animation):
+	if animation == "jump" or animation == "fall":
+		anim.stop()

@@ -1,16 +1,16 @@
 [gd_scene load_steps=90 format=3 uid="uid://bmxxhsxpo0uae"]
 
 [ext_resource type="Script" path="res://Daredevil_character/daredevil.gd" id="1_0fwrq"]
-[ext_resource type="Texture2D" uid="uid://be150wo8nj7cr" path="res://art/SPRITES/PERSONAJES/muerte animacion-Sheet.png" id="2_1ey8e"]
-[ext_resource type="Texture2D" uid="uid://bti6xtvily3ee" path="res://art/SPRITES/PERSONAJES/salto_animacion_gamejam-Sheet.png" id="3_6pnws"]
-[ext_resource type="Texture2D" uid="uid://b3gmm0sygo8v7" path="res://art/SPRITES/PERSONAJES/concept_p1_gamejam-Sheet.png" id="3_rjbhb"]
-[ext_resource type="Texture2D" uid="uid://bxcdwo4fblctr" path="res://art/esnaque.png" id="3_x5lyj"]
-[ext_resource type="Texture2D" uid="uid://crluk8lo8oiwb" path="res://art/SPRITES/PERSONAJES/GUSANITO.png" id="4_8bibf"]
-[ext_resource type="Texture2D" uid="uid://dx0rr0j1ahyvj" path="res://art/SPRITES/PERSONAJES/consumir_animaxcion-Sheet.png" id="6_mdql2"]
-[ext_resource type="Texture2D" uid="uid://dp5cdke68mf3n" path="res://art/SPRITES/PERSONAJES/animacion_deslizar-Sheet.png" id="8_ge12u"]
-[ext_resource type="Texture2D" uid="uid://b6xlpcnejag8p" path="res://art/SPRITES/PERSONAJES/lanzar_animacion-Sheet.png" id="8_jislb"]
-[ext_resource type="Texture2D" uid="uid://gsqj1s8ch885" path="res://art/SPRITES/PERSONAJES/caminar_aniamcion_gamejam-Sheet.png" id="9_sc3bq"]
-[ext_resource type="Texture2D" uid="uid://st5u6qsx5dbh" path="res://art/SPRITES/PERSONAJES/ANIMACIÓN SILLITA DE RUEDAS.png" id="10_p0a4a"]
+[ext_resource type="Texture2D" uid="uid://b4r1sxr32tvpx" path="res://art/SPRITES/PERSONAJES/muerte animacion-Sheet.png" id="2_1ey8e"]
+[ext_resource type="Texture2D" uid="uid://cxkd03gealtjx" path="res://art/SPRITES/PERSONAJES/salto_animacion_gamejam-Sheet.png" id="3_6pnws"]
+[ext_resource type="Texture2D" uid="uid://dn74kuui8ka6c" path="res://art/SPRITES/PERSONAJES/concept_p1_gamejam-Sheet.png" id="3_rjbhb"]
+[ext_resource type="Texture2D" uid="uid://dkytkbnwwsn8m" path="res://art/esnaque.png" id="3_x5lyj"]
+[ext_resource type="Texture2D" uid="uid://dxtvtkrjrumyv" path="res://art/SPRITES/PERSONAJES/GUSANITO.png" id="4_8bibf"]
+[ext_resource type="Texture2D" uid="uid://duy8vlqxk6rp5" path="res://art/SPRITES/PERSONAJES/consumir_animaxcion-Sheet.png" id="6_mdql2"]
+[ext_resource type="Texture2D" uid="uid://ceqtpay63ikn8" path="res://art/SPRITES/PERSONAJES/animacion_deslizar-Sheet.png" id="8_ge12u"]
+[ext_resource type="Texture2D" uid="uid://bw3opa4iq48bd" path="res://art/SPRITES/PERSONAJES/lanzar_animacion-Sheet.png" id="8_jislb"]
+[ext_resource type="Texture2D" uid="uid://c40gnggalv585" path="res://art/SPRITES/PERSONAJES/caminar_aniamcion_gamejam-Sheet.png" id="9_sc3bq"]
+[ext_resource type="Texture2D" uid="uid://cj4eo612bph7k" path="res://art/SPRITES/PERSONAJES/ANIMACIÓN SILLITA DE RUEDAS.png" id="10_p0a4a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8a0li"]
 custom_solver_bias = 0.097
@@ -374,7 +374,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nefdu")
 }],
-"loop": true,
+"loop": false,
 "name": &"fall",
 "speed": 5.0
 }, {
@@ -472,7 +472,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mfguv")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -611,7 +611,7 @@ animations = [{
 script = ExtResource("1_0fwrq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(35, -12)
+position = Vector2(30, -21)
 shape = SubResource("CapsuleShape2D_8a0li")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -619,5 +619,6 @@ shape = SubResource("CapsuleShape2D_8a0li")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(39, -25)
 sprite_frames = SubResource("SpriteFrames_rhkr2")
-animation = &"slide"
-frame_progress = 0.89018
+animation = &"fall"
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
